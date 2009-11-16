@@ -5,7 +5,6 @@
 log/*
 tmp/*
 db/*.sqlite3
-config/database.yml
 coverage/*
 spec/fixtures/*
 spec/integration/*
