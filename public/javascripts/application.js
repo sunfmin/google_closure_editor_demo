@@ -13,7 +13,7 @@ goog.require('goog.ui.editor.DefaultToolbar');
 goog.require('goog.ui.editor.ToolbarController');
 
 window["myapp"] = {}
-window["myapp"]["addEditor"] = function(textbox, toolbar){
+window["myapp"]["addEditor"] = function(textbox, toolbar, editor_value_field){
     // Create an editable field.
     var myField = new goog.editor.Field(textbox);
     
@@ -58,7 +58,7 @@ window["myapp"]["addEditor"] = function(textbox, toolbar){
     
     // Watch for field changes, to display below.
     goog.events.listen(myField, goog.editor.Field.EventType.DELAYEDCHANGE, function(){
-        goog.dom.$('fieldContents').value = myField.getCleanContents();
+        goog.dom.$(editor_value_field).value = myField.getCleanContents();
     });
     
     myField.makeEditable();

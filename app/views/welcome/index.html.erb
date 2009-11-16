@@ -4,7 +4,18 @@
 <div id='editMe'></div>
 
 <script type="text/javascript" charset="utf-8">
-	myapp.addEditor('editMe', 'toolbar')
+	myapp.addEditor('editMe', 'toolbar', 'the_editor_value')
 	// myapp.addDialog()
 </script>
-<button onclick="dialog1.setVisible(true)">Open Dialog</button>
+
+<br/><br/>
+
+<% form_tag :action => 'index' do  %>
+<input type="hidden" name="the_editor_name" id="the_editor_value">
+<%= submit_tag "Submit" %>
+<% end %>
+
+
+<hr>
+
+<%= params[:the_editor_name] %>
