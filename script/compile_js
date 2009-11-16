@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../config/boot',  __FILE__)
+%x{#{ENV['CLOSURE_HOME']}/closure/bin/calcdeps.py -i #{RAILS_ROOT}/public/javascripts/application.js -p #{ENV['CLOSURE_HOME']} -o compiled -c #{ENV['CLOSURE_HOME']}/closure/bin/compiler.jar -f "--compilation_level=ADVANCED_OPTIMIZATIONS" > #{RAILS_ROOT}/public/javascripts/compiled.js}
+#%x{#{ENV['CLOSURE_HOME']}/closure/bin/calcdeps.py -i #{RAILS_ROOT}/public/javascripts/application.js -p #{ENV['CLOSURE_HOME']} -o compiled -c #{ENV['CLOSURE_HOME']}/closure/bin/compiler.jar > #{RAILS_ROOT}/public/javascripts/compiled.js}
+

@@ -1,0 +1,24 @@
+Add javascript functions to application.js, In order to let the compiler work, the functions needs to be added like this:
+
+- Add Google Requires to the top of application.js, ex: goog.require('goog.dom');
+- Attach functions to window object like: 
+  window["myapp"] = {}
+  window["myapp"]["addEditor"] = function(textbox, toolbar){
+  }
+
+  NOTE: "window.myapp.addEditor = function()" will not work because of the name will be changed by compiler.
+- Copy the css and images from closure to public
+
+Run ./script/compile_js to compile the application.js to compiled.js
+
+In order to make the command work, please:
+
+- Checkout Google Closure:
+  svn checkout http://closure-library.googlecode.com/svn/trunk/ closure
+
+- Set CLOSURE_HOME to the checkout path
+  export CLOSURE_HOME=/Users/sunfmin/Developments/closure
+
+- Download http://closure-compiler.googlecode.com/files/compiler-latest.zip and extract the file, and copy the closure.jar to $CLOSURE_HOME/closure/bin
+
+

@@ -1,0 +1,16 @@
+.DS_Store
+*~
+*.swp
+*.swo
+log/*
+tmp/*
+db/*.sqlite3
+config/database.yml
+coverage/*
+spec/fixtures/*
+spec/integration/*
+!test/performance/*
+test/*
+.tags
+webrat-*
+public/system
